@@ -1,36 +1,48 @@
+// Copyright 2024 Google LLC. All rights reserved.
 //
-//  AppDelegate.swift
-//  GooglePlacesDemos
 //
-//  Created by Jakob Adams on 3/20/24.
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+// file except in compliance with the License. You may obtain a copy of the License at
 //
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software distributed under
+// the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+// ANY KIND, either express or implied. See the License for the specific language governing
+// permissions and limitations under the License.
 
+import GooglePlaces
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    guard let infoDictionary: [String: Any] = Bundle.main.infoDictionary else {
+      fatalError("Info.plist not found")
+    }
+    guard let apiKey: String = infoDictionary["API_KEY"] as? String else {
+      fatalError("API_KEY not set in Info.plist")
+    }
+    GMSPlacesClient.provideAPIKey(apiKey)
 
-
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    // Log the required open source licenses! Yes, just NSLog-ing them is not enough but is good
+    // for a demo.
+    print("Google Places open source licenses:\n%@", GMSPlacesClient.openSourceLicenseInfo())
     return true
   }
 
-  // MARK: UISceneSession Lifecycle
-
-  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  func application(
+    _ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession,
+    options: UIScene.ConnectionOptions
+  ) -> UISceneConfiguration {
+    let config = UISceneConfiguration(
+      name: "Default configuration", sessionRole: connectingSceneSession.role)
+    config.delegateClass = SceneDelegate.self
+    return config
   }
-
-  func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-  }
-
-
 }
 

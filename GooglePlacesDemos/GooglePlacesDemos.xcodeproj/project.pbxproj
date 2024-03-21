@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		568F03C92BACC7C7005E567C /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 568F03C82BACC7C7005E567C /* GooglePlaces */; };
 		56C25A532BAB9F5E00F43223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A522BAB9F5E00F43223 /* AppDelegate.swift */; };
 		56C25A552BAB9F5E00F43223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A542BAB9F5E00F43223 /* SceneDelegate.swift */; };
 		56C25A572BAB9F5E00F43223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A562BAB9F5E00F43223 /* ViewController.swift */; };
-		56C25A5A2BAB9F5E00F43223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C25A582BAB9F5E00F43223 /* Main.storyboard */; };
 		56C25A5C2BAB9F6000F43223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C25A5B2BAB9F6000F43223 /* Assets.xcassets */; };
 		56C25A5F2BAB9F6000F43223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C25A5D2BAB9F6000F43223 /* LaunchScreen.storyboard */; };
 		56C25A6A2BAB9F6000F43223 /* GooglePlacesDemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A692BAB9F6000F43223 /* GooglePlacesDemosTests.swift */; };
@@ -36,11 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		568F03CA2BACD69D005E567C /* InternalDevelopment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = InternalDevelopment.xcconfig; sourceTree = "<group>"; };
 		56C25A4F2BAB9F5E00F43223 /* GooglePlacesDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C25A522BAB9F5E00F43223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56C25A542BAB9F5E00F43223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		56C25A562BAB9F5E00F43223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		56C25A592BAB9F5E00F43223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56C25A5B2BAB9F6000F43223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56C25A5E2BAB9F6000F43223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56C25A602BAB9F6000F43223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568F03C92BACC7C7005E567C /* GooglePlaces in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,10 +103,10 @@
 				56C25A522BAB9F5E00F43223 /* AppDelegate.swift */,
 				56C25A542BAB9F5E00F43223 /* SceneDelegate.swift */,
 				56C25A562BAB9F5E00F43223 /* ViewController.swift */,
-				56C25A582BAB9F5E00F43223 /* Main.storyboard */,
 				56C25A5B2BAB9F6000F43223 /* Assets.xcassets */,
 				56C25A5D2BAB9F6000F43223 /* LaunchScreen.storyboard */,
 				56C25A602BAB9F6000F43223 /* Info.plist */,
+				568F03CA2BACD69D005E567C /* InternalDevelopment.xcconfig */,
 			);
 			path = GooglePlacesDemos;
 			sourceTree = "<group>";
@@ -143,6 +144,9 @@
 			dependencies = (
 			);
 			name = GooglePlacesDemos;
+			packageProductDependencies = (
+				568F03C82BACC7C7005E567C /* GooglePlaces */,
+			);
 			productName = GooglePlacesDemos;
 			productReference = 56C25A4F2BAB9F5E00F43223 /* GooglePlacesDemos.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +219,9 @@
 				Base,
 			);
 			mainGroup = 56C25A462BAB9F5E00F43223;
+			packageReferences = (
+				568F03C72BACC7C6005E567C /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+			);
 			productRefGroup = 56C25A502BAB9F5E00F43223 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +240,6 @@
 			files = (
 				56C25A5F2BAB9F6000F43223 /* LaunchScreen.storyboard in Resources */,
 				56C25A5C2BAB9F6000F43223 /* Assets.xcassets in Resources */,
-				56C25A5A2BAB9F5E00F43223 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +303,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		56C25A582BAB9F5E00F43223 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56C25A592BAB9F5E00F43223 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		56C25A5D2BAB9F6000F43223 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -318,6 +316,7 @@
 /* Begin XCBuildConfiguration section */
 		56C25A772BAB9F6000F43223 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 568F03CA2BACD69D005E567C /* InternalDevelopment.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -389,7 +388,6 @@
 				INFOPLIST_FILE = GooglePlacesDemos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -478,6 +476,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		568F03C72BACC7C6005E567C /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		568F03C82BACC7C7005E567C /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 568F03C72BACC7C6005E567C /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlaces;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56C25A472BAB9F5E00F43223 /* Project object */;
 }
