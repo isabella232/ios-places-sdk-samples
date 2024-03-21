@@ -1,4 +1,4 @@
-// Copyright 2024 Google LLC. All rights reserved.
+// Copyright 2020 Google LLC. All rights reserved.
 //
 //
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -13,15 +13,22 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
-  var window: UIWindow?
-
-  func scene(
-    _ scene: UIScene, willConnectTo session: UISceneSession,
-    options connectionOptions: UIScene.ConnectionOptions
-  ) {
-    guard let _ = (scene as? UIWindowScene) else { return }
-  }
+struct Sample {
+  let viewControllerClass: UIViewController.Type
+  let title: String
 }
 
+struct Section {
+  let name: String
+  let samples: [Sample]
+}
+
+enum Samples {
+  static func allSamples() -> [Section] {
+    let autoCompleteSample: [Sample] = [
+    ]
+    return [
+      Section(name: "Autocomplete", samples: autoCompleteSample),
+    ]
+  }
+}

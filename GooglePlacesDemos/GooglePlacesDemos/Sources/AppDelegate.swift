@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       fatalError("Info.plist not found")
     }
     guard let apiKey: String = infoDictionary["API_KEY"] as? String else {
+      // To use GooglePlacesDemos, please register an API Key for your application, set it in an
+      // xcconfig file, and use that config file for the configuration being built (Debug). Your
+      // API Key should be kept private and not be checked in.
+      //
+      // See documentation on getting an API Key for your API Project here:
+      // https://developers.google.com/places/ios-sdk/start#get-key
       fatalError("API_KEY not set in Info.plist")
     }
     GMSPlacesClient.provideAPIKey(apiKey)
