@@ -12,9 +12,15 @@
 // permissions and limitations under the License.
 
 import UIKit
+import SwiftUI
 
 struct Sample {
-  let viewControllerClass: UIViewController.Type
+  enum ViewType {
+    case swiftUI(any View)
+    case uiKit(UIViewController.Type)
+  }
+
+  let viewClass: ViewType
   let title: String
 }
 
@@ -25,10 +31,11 @@ struct Section {
 
 enum Samples {
   static func allSamples() -> [Section] {
-    let autoCompleteSample: [Sample] = [
+    let basicSamples: [Sample] = [
+      Sample(viewClass: .swiftUI(ClientRequests()), title: "Client Requests")
     ]
     return [
-      Section(name: "Autocomplete", samples: autoCompleteSample),
+      Section(name: "Basic", samples: basicSamples),
     ]
   }
 }

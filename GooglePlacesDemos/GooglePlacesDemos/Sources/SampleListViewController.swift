@@ -12,6 +12,7 @@
 // permissions and limitations under the License.
 
 import UIKit
+import SwiftUI
 
 /// The class which displays the list of demos.
 class SampleListViewController: UITableViewController {
@@ -22,7 +23,9 @@ class SampleListViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    tableView.register(
+      UITableViewCell.self, forCellReuseIdentifier: SampleListViewController.sampleCellIdentifier)
   }
 
   func sample(at indexPath: IndexPath) -> Sample? {
@@ -66,11 +69,14 @@ class SampleListViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     if let sample = sample(at: indexPath) {
-      let viewController = sample.viewControllerClass.init()
-      /*if let controller = viewController as? AutocompleteBaseViewController {
-        controller.autocompleteConfiguration = configuration
-      }*/
-      navigationController?.pushViewController(viewController, animated: true)
+      switch sample.viewClass {
+      case .swiftUI(let viewType):
+        let hostingController = UIHostingController(rootView: AnyView(erasing: viewType))
+        navigationController?.pushViewController(hostingController, animated: true)
+      case .uiKit(let viewControllerType):
+        let viewController = viewControllerType.init()
+        navigationController?.pushViewController(viewController, animated: true)
+      }
     }
   }
 }
