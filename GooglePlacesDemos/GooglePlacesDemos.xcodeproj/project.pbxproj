@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561E83F32BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */; };
 		568905272BB760D600398E39 /* ClientRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568905262BB760D600398E39 /* ClientRequests.swift */; };
 		5689052E2BB761CA00398E39 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5689052D2BB761CA00398E39 /* GooglePlaces.bundle */; };
 		568905302BB7620B00398E39 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5689052F2BB7620B00398E39 /* GooglePlaces.xcframework */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = GooglePlacesDemos.xcconfig; sourceTree = "<group>"; };
 		568905262BB760D600398E39 /* ClientRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequests.swift; sourceTree = "<group>"; };
 		5689052D2BB761CA00398E39 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlaces.bundle; sourceTree = "<group>"; };
 		5689052F2BB7620B00398E39 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
@@ -60,7 +62,6 @@
 		5689053F2BB7626000398E39 /* GooglePlacesSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlacesSwift.xcframework; sourceTree = "<group>"; };
 		568905432BB762F600398E39 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 		568905452BB774B700398E39 /* MultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPicker.swift; sourceTree = "<group>"; };
-		568F03CA2BACD69D005E567C /* InternalDevelopment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = InternalDevelopment.xcconfig; sourceTree = "<group>"; };
 		568F03D42BACDE23005E567C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		56C25A4F2BAB9F5E00F43223 /* GooglePlacesDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C25A522BAB9F5E00F43223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,10 +181,10 @@
 		56C25A512BAB9F5E00F43223 /* GooglePlacesDemos */ = {
 			isa = PBXGroup;
 			children = (
+				561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */,
 				568F03CC2BACDB6D005E567C /* Sources */,
 				568F03CB2BACDB3C005E567C /* Resources */,
 				56C25A602BAB9F6000F43223 /* Info.plist */,
-				568F03CA2BACD69D005E567C /* InternalDevelopment.xcconfig */,
 			);
 			path = GooglePlacesDemos;
 			sourceTree = "<group>";
@@ -316,6 +317,7 @@
 				56C25A5F2BAB9F6000F43223 /* LaunchScreen.storyboard in Resources */,
 				5689052E2BB761CA00398E39 /* GooglePlaces.bundle in Resources */,
 				56C25A5C2BAB9F6000F43223 /* Assets.xcassets in Resources */,
+				561E83F32BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +398,7 @@
 /* Begin XCBuildConfiguration section */
 		56C25A772BAB9F6000F43223 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 568F03CA2BACD69D005E567C /* InternalDevelopment.xcconfig */;
+			baseConfigurationReference = 561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
