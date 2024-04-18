@@ -7,100 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		561E83F32BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */; };
-		568905272BB760D600398E39 /* ClientRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568905262BB760D600398E39 /* ClientRequests.swift */; };
-		5689052E2BB761CA00398E39 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5689052D2BB761CA00398E39 /* GooglePlaces.bundle */; };
-		568905302BB7620B00398E39 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5689052F2BB7620B00398E39 /* GooglePlaces.xcframework */; };
-		568905342BB7622400398E39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568905332BB7622400398E39 /* CoreGraphics.framework */; };
-		568905362BB7622A00398E39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568905352BB7622A00398E39 /* CoreLocation.framework */; };
-		568905382BB7623500398E39 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 568905372BB7623500398E39 /* libc++.tbd */; };
-		5689053A2BB7623D00398E39 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 568905392BB7623D00398E39 /* libz.tbd */; };
-		5689053C2BB7624200398E39 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5689053B2BB7624200398E39 /* QuartzCore.framework */; };
-		5689053E2BB7624800398E39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5689053D2BB7624800398E39 /* UIKit.framework */; };
-		568905402BB7626000398E39 /* GooglePlacesSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5689053F2BB7626000398E39 /* GooglePlacesSwift.xcframework */; };
-		568905442BB762F600398E39 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568905432BB762F600398E39 /* LocationDataManager.swift */; };
-		568905462BB774B700398E39 /* MultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568905452BB774B700398E39 /* MultiPicker.swift */; };
-		568F03D52BACDE23005E567C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F03D42BACDE23005E567C /* SampleData.swift */; };
-		56C25A532BAB9F5E00F43223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A522BAB9F5E00F43223 /* AppDelegate.swift */; };
-		56C25A552BAB9F5E00F43223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A542BAB9F5E00F43223 /* SceneDelegate.swift */; };
-		56C25A572BAB9F5E00F43223 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A562BAB9F5E00F43223 /* SampleListViewController.swift */; };
-		56C25A5C2BAB9F6000F43223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C25A5B2BAB9F6000F43223 /* Assets.xcassets */; };
-		56C25A5F2BAB9F6000F43223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C25A5D2BAB9F6000F43223 /* LaunchScreen.storyboard */; };
-		56C25A6A2BAB9F6000F43223 /* GooglePlacesDemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A692BAB9F6000F43223 /* GooglePlacesDemosTests.swift */; };
-		56C25A742BAB9F6000F43223 /* GooglePlacesDemosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A732BAB9F6000F43223 /* GooglePlacesDemosUITests.swift */; };
-		56C25A762BAB9F6000F43223 /* GooglePlacesDemosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C25A752BAB9F6000F43223 /* GooglePlacesDemosUITestsLaunchTests.swift */; };
+		567EFD6C2BD080230055E7A6 /* GooglePlacesDemosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD6B2BD080230055E7A6 /* GooglePlacesDemosApp.swift */; };
+		567EFD6E2BD080230055E7A6 /* SampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD6D2BD080230055E7A6 /* SampleList.swift */; };
+		567EFD702BD080250055E7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567EFD6F2BD080250055E7A6 /* Assets.xcassets */; };
+		567EFD732BD080250055E7A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567EFD722BD080250055E7A6 /* Preview Assets.xcassets */; };
+		567EFD7D2BD080250055E7A6 /* GooglePlacesDemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD7C2BD080250055E7A6 /* GooglePlacesDemosTests.swift */; };
+		567EFD872BD080250055E7A6 /* GooglePlacesDemosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */; };
+		567EFD892BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */; };
+		567EFD972BD080B60055E7A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EFD962BD080B60055E7A6 /* CoreGraphics.framework */; };
+		567EFD992BD080BD0055E7A6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EFD982BD080BD0055E7A6 /* CoreLocation.framework */; };
+		567EFD9B2BD080CF0055E7A6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EFD9A2BD080C70055E7A6 /* libc++.tbd */; };
+		567EFD9E2BD080DF0055E7A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EFD9D2BD080DF0055E7A6 /* QuartzCore.framework */; };
+		567EFD9F2BD080E40055E7A6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EFD9C2BD080D90055E7A6 /* libz.tbd */; };
+		567EFDA12BD080FB0055E7A6 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EFDA02BD080FA0055E7A6 /* GooglePlaces.xcframework */; };
+		567EFDA52BD080FF0055E7A6 /* GooglePlacesSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EFDA42BD080FF0055E7A6 /* GooglePlacesSwift.xcframework */; };
+		567EFDA82BD081090055E7A6 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 567EFDA72BD081090055E7A6 /* GooglePlaces.bundle */; };
+		567EFDAA2BD0812B0055E7A6 /* GooglePlacesDemos.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 567EFDA92BD0812A0055E7A6 /* GooglePlacesDemos.xcconfig */; };
+		567EFDAD2BD083A40055E7A6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFDAC2BD083A40055E7A6 /* SampleData.swift */; };
+		567EFDB02BD083B40055E7A6 /* ClientRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFDAE2BD083B40055E7A6 /* ClientRequests.swift */; };
+		567EFDB42BD08F6D0055E7A6 /* MultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFDB32BD08F6D0055E7A6 /* MultiPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		56C25A662BAB9F6000F43223 /* PBXContainerItemProxy */ = {
+		567EFD792BD080250055E7A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 56C25A472BAB9F5E00F43223 /* Project object */;
+			containerPortal = 567EFD602BD080230055E7A6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 56C25A4E2BAB9F5E00F43223;
+			remoteGlobalIDString = 567EFD672BD080230055E7A6;
 			remoteInfo = GooglePlacesDemos;
 		};
-		56C25A702BAB9F6000F43223 /* PBXContainerItemProxy */ = {
+		567EFD832BD080250055E7A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 56C25A472BAB9F5E00F43223 /* Project object */;
+			containerPortal = 567EFD602BD080230055E7A6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 56C25A4E2BAB9F5E00F43223;
+			remoteGlobalIDString = 567EFD672BD080230055E7A6;
 			remoteInfo = GooglePlacesDemos;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = GooglePlacesDemos.xcconfig; sourceTree = "<group>"; };
-		568905262BB760D600398E39 /* ClientRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequests.swift; sourceTree = "<group>"; };
-		5689052D2BB761CA00398E39 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlaces.bundle; sourceTree = "<group>"; };
-		5689052F2BB7620B00398E39 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
-		568905332BB7622400398E39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		568905352BB7622A00398E39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		568905372BB7623500398E39 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		568905392BB7623D00398E39 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		5689053B2BB7624200398E39 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		5689053D2BB7624800398E39 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5689053F2BB7626000398E39 /* GooglePlacesSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlacesSwift.xcframework; sourceTree = "<group>"; };
-		568905432BB762F600398E39 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
-		568905452BB774B700398E39 /* MultiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPicker.swift; sourceTree = "<group>"; };
-		568F03D42BACDE23005E567C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
-		56C25A4F2BAB9F5E00F43223 /* GooglePlacesDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56C25A522BAB9F5E00F43223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56C25A542BAB9F5E00F43223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		56C25A562BAB9F5E00F43223 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
-		56C25A5B2BAB9F6000F43223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		56C25A5E2BAB9F6000F43223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		56C25A602BAB9F6000F43223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56C25A652BAB9F6000F43223 /* GooglePlacesDemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesDemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		56C25A692BAB9F6000F43223 /* GooglePlacesDemosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosTests.swift; sourceTree = "<group>"; };
-		56C25A6F2BAB9F6000F43223 /* GooglePlacesDemosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesDemosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		56C25A732BAB9F6000F43223 /* GooglePlacesDemosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITests.swift; sourceTree = "<group>"; };
-		56C25A752BAB9F6000F43223 /* GooglePlacesDemosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		567EFD682BD080230055E7A6 /* GooglePlacesDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		567EFD6B2BD080230055E7A6 /* GooglePlacesDemosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosApp.swift; sourceTree = "<group>"; };
+		567EFD6D2BD080230055E7A6 /* SampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleList.swift; sourceTree = "<group>"; };
+		567EFD6F2BD080250055E7A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		567EFD722BD080250055E7A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		567EFD782BD080250055E7A6 /* GooglePlacesDemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesDemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		567EFD7C2BD080250055E7A6 /* GooglePlacesDemosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosTests.swift; sourceTree = "<group>"; };
+		567EFD822BD080250055E7A6 /* GooglePlacesDemosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesDemosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITests.swift; sourceTree = "<group>"; };
+		567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		567EFD962BD080B60055E7A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		567EFD982BD080BD0055E7A6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		567EFD9A2BD080C70055E7A6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		567EFD9C2BD080D90055E7A6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		567EFD9D2BD080DF0055E7A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		567EFDA02BD080FA0055E7A6 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GooglePlaces.xcframework; path = "../../dev/iOS Geo SDK Samples/ios-places-sdk-samples/GooglePlacesDemos/GooglePlaces.xcframework"; sourceTree = "<group>"; };
+		567EFDA42BD080FF0055E7A6 /* GooglePlacesSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GooglePlacesSwift.xcframework; path = "../../dev/iOS Geo SDK Samples/ios-places-sdk-samples/GooglePlacesDemos/GooglePlacesSwift.xcframework"; sourceTree = "<group>"; };
+		567EFDA72BD081090055E7A6 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlaces.bundle; sourceTree = "<group>"; };
+		567EFDA92BD0812A0055E7A6 /* GooglePlacesDemos.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = GooglePlacesDemos.xcconfig; sourceTree = "<group>"; };
+		567EFDAB2BD081850055E7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		567EFDAC2BD083A40055E7A6 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		567EFDAE2BD083B40055E7A6 /* ClientRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientRequests.swift; sourceTree = "<group>"; };
+		567EFDB32BD08F6D0055E7A6 /* MultiPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		56C25A4C2BAB9F5E00F43223 /* Frameworks */ = {
+		567EFD652BD080230055E7A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5689053E2BB7624800398E39 /* UIKit.framework in Frameworks */,
-				5689053C2BB7624200398E39 /* QuartzCore.framework in Frameworks */,
-				5689053A2BB7623D00398E39 /* libz.tbd in Frameworks */,
-				568905382BB7623500398E39 /* libc++.tbd in Frameworks */,
-				568905362BB7622A00398E39 /* CoreLocation.framework in Frameworks */,
-				568905342BB7622400398E39 /* CoreGraphics.framework in Frameworks */,
-				568905402BB7626000398E39 /* GooglePlacesSwift.xcframework in Frameworks */,
-				568905302BB7620B00398E39 /* GooglePlaces.xcframework in Frameworks */,
+				567EFD9E2BD080DF0055E7A6 /* QuartzCore.framework in Frameworks */,
+				567EFD9B2BD080CF0055E7A6 /* libc++.tbd in Frameworks */,
+				567EFD992BD080BD0055E7A6 /* CoreLocation.framework in Frameworks */,
+				567EFD972BD080B60055E7A6 /* CoreGraphics.framework in Frameworks */,
+				567EFDA12BD080FB0055E7A6 /* GooglePlaces.xcframework in Frameworks */,
+				567EFDA52BD080FF0055E7A6 /* GooglePlacesSwift.xcframework in Frameworks */,
+				567EFD9F2BD080E40055E7A6 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56C25A622BAB9F6000F43223 /* Frameworks */ = {
+		567EFD752BD080250055E7A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56C25A6C2BAB9F6000F43223 /* Frameworks */ = {
+		567EFD7F2BD080250055E7A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,184 +103,187 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		568905252BB760C100398E39 /* Samples */ = {
+		567EFD5F2BD080230055E7A6 = {
 			isa = PBXGroup;
 			children = (
-				568905262BB760D600398E39 /* ClientRequests.swift */,
-			);
-			path = Samples;
-			sourceTree = "<group>";
-		};
-		568905282BB761AC00398E39 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5689053F2BB7626000398E39 /* GooglePlacesSwift.xcframework */,
-				5689053D2BB7624800398E39 /* UIKit.framework */,
-				5689053B2BB7624200398E39 /* QuartzCore.framework */,
-				568905392BB7623D00398E39 /* libz.tbd */,
-				568905372BB7623500398E39 /* libc++.tbd */,
-				568905352BB7622A00398E39 /* CoreLocation.framework */,
-				568905332BB7622400398E39 /* CoreGraphics.framework */,
-				5689052F2BB7620B00398E39 /* GooglePlaces.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		568F03CB2BACDB3C005E567C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				56C25A5B2BAB9F6000F43223 /* Assets.xcassets */,
-				56C25A5D2BAB9F6000F43223 /* LaunchScreen.storyboard */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		568F03CC2BACDB6D005E567C /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				568905252BB760C100398E39 /* Samples */,
-				56C25A522BAB9F5E00F43223 /* AppDelegate.swift */,
-				56C25A542BAB9F5E00F43223 /* SceneDelegate.swift */,
-				56C25A562BAB9F5E00F43223 /* SampleListViewController.swift */,
-				568F03D42BACDE23005E567C /* SampleData.swift */,
-				568905432BB762F600398E39 /* LocationDataManager.swift */,
-				568905452BB774B700398E39 /* MultiPicker.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		56C25A462BAB9F5E00F43223 = {
-			isa = PBXGroup;
-			children = (
-				5689052D2BB761CA00398E39 /* GooglePlaces.bundle */,
-				56C25A512BAB9F5E00F43223 /* GooglePlacesDemos */,
-				56C25A682BAB9F6000F43223 /* GooglePlacesDemosTests */,
-				56C25A722BAB9F6000F43223 /* GooglePlacesDemosUITests */,
-				56C25A502BAB9F5E00F43223 /* Products */,
-				568905282BB761AC00398E39 /* Frameworks */,
+				567EFDA72BD081090055E7A6 /* GooglePlaces.bundle */,
+				567EFD6A2BD080230055E7A6 /* GooglePlacesDemos */,
+				567EFD7B2BD080250055E7A6 /* GooglePlacesDemosTests */,
+				567EFD852BD080250055E7A6 /* GooglePlacesDemosUITests */,
+				567EFD692BD080230055E7A6 /* Products */,
+				567EFD952BD080B60055E7A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		56C25A502BAB9F5E00F43223 /* Products */ = {
+		567EFD692BD080230055E7A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56C25A4F2BAB9F5E00F43223 /* GooglePlacesDemos.app */,
-				56C25A652BAB9F6000F43223 /* GooglePlacesDemosTests.xctest */,
-				56C25A6F2BAB9F6000F43223 /* GooglePlacesDemosUITests.xctest */,
+				567EFD682BD080230055E7A6 /* GooglePlacesDemos.app */,
+				567EFD782BD080250055E7A6 /* GooglePlacesDemosTests.xctest */,
+				567EFD822BD080250055E7A6 /* GooglePlacesDemosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56C25A512BAB9F5E00F43223 /* GooglePlacesDemos */ = {
+		567EFD6A2BD080230055E7A6 /* GooglePlacesDemos */ = {
 			isa = PBXGroup;
 			children = (
-				561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */,
-				568F03CC2BACDB6D005E567C /* Sources */,
-				568F03CB2BACDB3C005E567C /* Resources */,
-				56C25A602BAB9F6000F43223 /* Info.plist */,
+				567EFDAB2BD081850055E7A6 /* Info.plist */,
+				567EFDA92BD0812A0055E7A6 /* GooglePlacesDemos.xcconfig */,
+				567EFDB62BD0CB730055E7A6 /* Sources */,
+				567EFDB52BD0CB6B0055E7A6 /* Resources */,
+				567EFD712BD080250055E7A6 /* Preview Content */,
 			);
 			path = GooglePlacesDemos;
 			sourceTree = "<group>";
 		};
-		56C25A682BAB9F6000F43223 /* GooglePlacesDemosTests */ = {
+		567EFD712BD080250055E7A6 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				56C25A692BAB9F6000F43223 /* GooglePlacesDemosTests.swift */,
+				567EFD722BD080250055E7A6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		567EFD7B2BD080250055E7A6 /* GooglePlacesDemosTests */ = {
+			isa = PBXGroup;
+			children = (
+				567EFD7C2BD080250055E7A6 /* GooglePlacesDemosTests.swift */,
 			);
 			path = GooglePlacesDemosTests;
 			sourceTree = "<group>";
 		};
-		56C25A722BAB9F6000F43223 /* GooglePlacesDemosUITests */ = {
+		567EFD852BD080250055E7A6 /* GooglePlacesDemosUITests */ = {
 			isa = PBXGroup;
 			children = (
-				56C25A732BAB9F6000F43223 /* GooglePlacesDemosUITests.swift */,
-				56C25A752BAB9F6000F43223 /* GooglePlacesDemosUITestsLaunchTests.swift */,
+				567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */,
+				567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */,
 			);
 			path = GooglePlacesDemosUITests;
+			sourceTree = "<group>";
+		};
+		567EFD952BD080B60055E7A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567EFDA42BD080FF0055E7A6 /* GooglePlacesSwift.xcframework */,
+				567EFDA02BD080FA0055E7A6 /* GooglePlaces.xcframework */,
+				567EFD9D2BD080DF0055E7A6 /* QuartzCore.framework */,
+				567EFD9C2BD080D90055E7A6 /* libz.tbd */,
+				567EFD9A2BD080C70055E7A6 /* libc++.tbd */,
+				567EFD982BD080BD0055E7A6 /* CoreLocation.framework */,
+				567EFD962BD080B60055E7A6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		567EFDAF2BD083B40055E7A6 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				567EFDAE2BD083B40055E7A6 /* ClientRequests.swift */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		567EFDB52BD0CB6B0055E7A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				567EFD6F2BD080250055E7A6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		567EFDB62BD0CB730055E7A6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				567EFD6B2BD080230055E7A6 /* GooglePlacesDemosApp.swift */,
+				567EFDB32BD08F6D0055E7A6 /* MultiPicker.swift */,
+				567EFD6D2BD080230055E7A6 /* SampleList.swift */,
+				567EFDAC2BD083A40055E7A6 /* SampleData.swift */,
+				567EFDAF2BD083B40055E7A6 /* Samples */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56C25A4E2BAB9F5E00F43223 /* GooglePlacesDemos */ = {
+		567EFD672BD080230055E7A6 /* GooglePlacesDemos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56C25A792BAB9F6000F43223 /* Build configuration list for PBXNativeTarget "GooglePlacesDemos" */;
+			buildConfigurationList = 567EFD8C2BD080250055E7A6 /* Build configuration list for PBXNativeTarget "GooglePlacesDemos" */;
 			buildPhases = (
-				56C25A4B2BAB9F5E00F43223 /* Sources */,
-				56C25A4C2BAB9F5E00F43223 /* Frameworks */,
-				56C25A4D2BAB9F5E00F43223 /* Resources */,
+				567EFD642BD080230055E7A6 /* Sources */,
+				567EFD652BD080230055E7A6 /* Frameworks */,
+				567EFD662BD080230055E7A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GooglePlacesDemos;
-			packageProductDependencies = (
-			);
 			productName = GooglePlacesDemos;
-			productReference = 56C25A4F2BAB9F5E00F43223 /* GooglePlacesDemos.app */;
+			productReference = 567EFD682BD080230055E7A6 /* GooglePlacesDemos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		56C25A642BAB9F6000F43223 /* GooglePlacesDemosTests */ = {
+		567EFD772BD080250055E7A6 /* GooglePlacesDemosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56C25A7C2BAB9F6000F43223 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosTests" */;
+			buildConfigurationList = 567EFD8F2BD080250055E7A6 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosTests" */;
 			buildPhases = (
-				56C25A612BAB9F6000F43223 /* Sources */,
-				56C25A622BAB9F6000F43223 /* Frameworks */,
-				56C25A632BAB9F6000F43223 /* Resources */,
+				567EFD742BD080250055E7A6 /* Sources */,
+				567EFD752BD080250055E7A6 /* Frameworks */,
+				567EFD762BD080250055E7A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56C25A672BAB9F6000F43223 /* PBXTargetDependency */,
+				567EFD7A2BD080250055E7A6 /* PBXTargetDependency */,
 			);
 			name = GooglePlacesDemosTests;
 			productName = GooglePlacesDemosTests;
-			productReference = 56C25A652BAB9F6000F43223 /* GooglePlacesDemosTests.xctest */;
+			productReference = 567EFD782BD080250055E7A6 /* GooglePlacesDemosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		56C25A6E2BAB9F6000F43223 /* GooglePlacesDemosUITests */ = {
+		567EFD812BD080250055E7A6 /* GooglePlacesDemosUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56C25A7F2BAB9F6000F43223 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosUITests" */;
+			buildConfigurationList = 567EFD922BD080250055E7A6 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosUITests" */;
 			buildPhases = (
-				56C25A6B2BAB9F6000F43223 /* Sources */,
-				56C25A6C2BAB9F6000F43223 /* Frameworks */,
-				56C25A6D2BAB9F6000F43223 /* Resources */,
+				567EFD7E2BD080250055E7A6 /* Sources */,
+				567EFD7F2BD080250055E7A6 /* Frameworks */,
+				567EFD802BD080250055E7A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56C25A712BAB9F6000F43223 /* PBXTargetDependency */,
+				567EFD842BD080250055E7A6 /* PBXTargetDependency */,
 			);
 			name = GooglePlacesDemosUITests;
 			productName = GooglePlacesDemosUITests;
-			productReference = 56C25A6F2BAB9F6000F43223 /* GooglePlacesDemosUITests.xctest */;
+			productReference = 567EFD822BD080250055E7A6 /* GooglePlacesDemosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		56C25A472BAB9F5E00F43223 /* Project object */ = {
+		567EFD602BD080230055E7A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					56C25A4E2BAB9F5E00F43223 = {
-						CreatedOnToolsVersion = 15.1;
+					567EFD672BD080230055E7A6 = {
+						CreatedOnToolsVersion = 15.3;
 					};
-					56C25A642BAB9F6000F43223 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 56C25A4E2BAB9F5E00F43223;
+					567EFD772BD080250055E7A6 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 567EFD672BD080230055E7A6;
 					};
-					56C25A6E2BAB9F6000F43223 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 56C25A4E2BAB9F5E00F43223;
+					567EFD812BD080250055E7A6 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 567EFD672BD080230055E7A6;
 					};
 				};
 			};
-			buildConfigurationList = 56C25A4A2BAB9F5E00F43223 /* Build configuration list for PBXProject "GooglePlacesDemos" */;
+			buildConfigurationList = 567EFD632BD080230055E7A6 /* Build configuration list for PBXProject "GooglePlacesDemos" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -295,40 +291,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 56C25A462BAB9F5E00F43223;
-			packageReferences = (
-			);
-			productRefGroup = 56C25A502BAB9F5E00F43223 /* Products */;
+			mainGroup = 567EFD5F2BD080230055E7A6;
+			productRefGroup = 567EFD692BD080230055E7A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56C25A4E2BAB9F5E00F43223 /* GooglePlacesDemos */,
-				56C25A642BAB9F6000F43223 /* GooglePlacesDemosTests */,
-				56C25A6E2BAB9F6000F43223 /* GooglePlacesDemosUITests */,
+				567EFD672BD080230055E7A6 /* GooglePlacesDemos */,
+				567EFD772BD080250055E7A6 /* GooglePlacesDemosTests */,
+				567EFD812BD080250055E7A6 /* GooglePlacesDemosUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		56C25A4D2BAB9F5E00F43223 /* Resources */ = {
+		567EFD662BD080230055E7A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C25A5F2BAB9F6000F43223 /* LaunchScreen.storyboard in Resources */,
-				5689052E2BB761CA00398E39 /* GooglePlaces.bundle in Resources */,
-				56C25A5C2BAB9F6000F43223 /* Assets.xcassets in Resources */,
-				561E83F32BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig in Resources */,
+				567EFD732BD080250055E7A6 /* Preview Assets.xcassets in Resources */,
+				567EFDA82BD081090055E7A6 /* GooglePlaces.bundle in Resources */,
+				567EFDAA2BD0812B0055E7A6 /* GooglePlacesDemos.xcconfig in Resources */,
+				567EFD702BD080250055E7A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56C25A632BAB9F6000F43223 /* Resources */ = {
+		567EFD762BD080250055E7A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56C25A6D2BAB9F6000F43223 /* Resources */ = {
+		567EFD802BD080250055E7A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,67 +332,54 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		56C25A4B2BAB9F5E00F43223 /* Sources */ = {
+		567EFD642BD080230055E7A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C25A572BAB9F5E00F43223 /* SampleListViewController.swift in Sources */,
-				56C25A532BAB9F5E00F43223 /* AppDelegate.swift in Sources */,
-				56C25A552BAB9F5E00F43223 /* SceneDelegate.swift in Sources */,
-				568F03D52BACDE23005E567C /* SampleData.swift in Sources */,
-				568905442BB762F600398E39 /* LocationDataManager.swift in Sources */,
-				568905462BB774B700398E39 /* MultiPicker.swift in Sources */,
-				568905272BB760D600398E39 /* ClientRequests.swift in Sources */,
+				567EFD6E2BD080230055E7A6 /* SampleList.swift in Sources */,
+				567EFDAD2BD083A40055E7A6 /* SampleData.swift in Sources */,
+				567EFDB02BD083B40055E7A6 /* ClientRequests.swift in Sources */,
+				567EFD6C2BD080230055E7A6 /* GooglePlacesDemosApp.swift in Sources */,
+				567EFDB42BD08F6D0055E7A6 /* MultiPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56C25A612BAB9F6000F43223 /* Sources */ = {
+		567EFD742BD080250055E7A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C25A6A2BAB9F6000F43223 /* GooglePlacesDemosTests.swift in Sources */,
+				567EFD7D2BD080250055E7A6 /* GooglePlacesDemosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56C25A6B2BAB9F6000F43223 /* Sources */ = {
+		567EFD7E2BD080250055E7A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C25A762BAB9F6000F43223 /* GooglePlacesDemosUITestsLaunchTests.swift in Sources */,
-				56C25A742BAB9F6000F43223 /* GooglePlacesDemosUITests.swift in Sources */,
+				567EFD892BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift in Sources */,
+				567EFD872BD080250055E7A6 /* GooglePlacesDemosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		56C25A672BAB9F6000F43223 /* PBXTargetDependency */ = {
+		567EFD7A2BD080250055E7A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56C25A4E2BAB9F5E00F43223 /* GooglePlacesDemos */;
-			targetProxy = 56C25A662BAB9F6000F43223 /* PBXContainerItemProxy */;
+			target = 567EFD672BD080230055E7A6 /* GooglePlacesDemos */;
+			targetProxy = 567EFD792BD080250055E7A6 /* PBXContainerItemProxy */;
 		};
-		56C25A712BAB9F6000F43223 /* PBXTargetDependency */ = {
+		567EFD842BD080250055E7A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56C25A4E2BAB9F5E00F43223 /* GooglePlacesDemos */;
-			targetProxy = 56C25A702BAB9F6000F43223 /* PBXContainerItemProxy */;
+			target = 567EFD672BD080230055E7A6 /* GooglePlacesDemos */;
+			targetProxy = 567EFD832BD080250055E7A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		56C25A5D2BAB9F6000F43223 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56C25A5E2BAB9F6000F43223 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		56C25A772BAB9F6000F43223 /* Debug */ = {
+		567EFD8A2BD080250055E7A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 561E83F22BC9DE89005F4AB4 /* GooglePlacesDemos.xcconfig */;
+			baseConfigurationReference = 567EFDA92BD0812A0055E7A6 /* GooglePlacesDemos.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -449,36 +430,41 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		56C25A7A2BAB9F6000F43223 /* Debug */ = {
+		567EFD8D2BD080250055E7A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GooglePlacesDemos/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GooglePlacesDemos/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.GooglePlacesDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -487,7 +473,7 @@
 			};
 			name = Debug;
 		};
-		56C25A7D2BAB9F6000F43223 /* Debug */ = {
+		567EFD902BD080250055E7A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -495,7 +481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.GooglePlacesDemosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -506,7 +492,7 @@
 			};
 			name = Debug;
 		};
-		56C25A802BAB9F6000F43223 /* Debug */ = {
+		567EFD932BD080250055E7A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -526,39 +512,39 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56C25A4A2BAB9F5E00F43223 /* Build configuration list for PBXProject "GooglePlacesDemos" */ = {
+		567EFD632BD080230055E7A6 /* Build configuration list for PBXProject "GooglePlacesDemos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56C25A772BAB9F6000F43223 /* Debug */,
+				567EFD8A2BD080250055E7A6 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		56C25A792BAB9F6000F43223 /* Build configuration list for PBXNativeTarget "GooglePlacesDemos" */ = {
+		567EFD8C2BD080250055E7A6 /* Build configuration list for PBXNativeTarget "GooglePlacesDemos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56C25A7A2BAB9F6000F43223 /* Debug */,
+				567EFD8D2BD080250055E7A6 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		56C25A7C2BAB9F6000F43223 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosTests" */ = {
+		567EFD8F2BD080250055E7A6 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56C25A7D2BAB9F6000F43223 /* Debug */,
+				567EFD902BD080250055E7A6 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		56C25A7F2BAB9F6000F43223 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosUITests" */ = {
+		567EFD922BD080250055E7A6 /* Build configuration list for PBXNativeTarget "GooglePlacesDemosUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56C25A802BAB9F6000F43223 /* Debug */,
+				567EFD932BD080250055E7A6 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 56C25A472BAB9F5E00F43223 /* Project object */;
+	rootObject = 567EFD602BD080230055E7A6 /* Project object */;
 }

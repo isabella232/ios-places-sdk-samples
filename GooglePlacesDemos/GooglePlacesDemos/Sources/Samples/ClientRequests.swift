@@ -25,8 +25,8 @@ struct ClientRequests: View {
   @State private var resultsModel = ResultsModel()
   @State private var errorAlertDescription = ""
   @State private var shouldPresentError = false
-  @StateObject private var locationDataManager = LocationDataManager()
 
+  @MainActor
   private static var placesClient = PlacesClient.shared
 
   private var clientRequests: some View {
@@ -47,7 +47,6 @@ struct ClientRequests: View {
         clientRequests
       }
       .sheet(isPresented: $shouldShowInput) {
-        resultsModel = ResultsModel()
         onDismissInput()
       } content: {
         Input(inputModel: $inputModel, shouldShowInput: $shouldShowInput)
@@ -75,7 +74,7 @@ struct ClientRequests: View {
       Task {
         switch await Self.placesClient.fetchPlace(with: fetchPlaceRequest) {
         case .success(let place):
-          resultsModel.place = place
+          resultsModel = ResultsModel(place: place)
         case .failure(let placesError):
           errorAlertDescription = placesError.localizedDescription
           shouldPresentError = true
@@ -101,7 +100,7 @@ struct ClientRequests: View {
       Task {
         switch await Self.placesClient.fetchPhoto(with: fetchPhotoRequest) {
         case .success(let uiImage):
-          resultsModel.image = Image(uiImage: uiImage)
+          resultsModel = ResultsModel(image: Image(uiImage: uiImage))
         case .failure(let placesError):
           errorAlertDescription = placesError.localizedDescription
           shouldPresentError = true
@@ -121,7 +120,7 @@ struct ClientRequests: View {
       Task {
         switch await Self.placesClient.fetchAutocompleteSuggestions(with: autocompleteRequest) {
         case .success(let autocompleteSuggestions):
-          resultsModel.suggestions = autocompleteSuggestions
+          resultsModel = ResultsModel(suggestions: autocompleteSuggestions)
         case .failure(let placesError):
           errorAlertDescription = placesError.localizedDescription
           shouldPresentError = true
@@ -139,8 +138,7 @@ struct ClientRequests: View {
         switch await Self.placesClient.isPlaceOpen(inputModel.placeID, date: inputModel.date)
         {
         case .success(let isOpen):
-          resultsModel.displayIsOpen = true
-          resultsModel.isOpen = isOpen
+          resultsModel = ResultsModel(displayIsOpen: true, isOpen: isOpen)
         case .failure(let placesError):
           errorAlertDescription = placesError.localizedDescription
           shouldPresentError = true
@@ -164,8 +162,7 @@ struct ClientRequests: View {
         switch await Self.placesClient.isPlaceOpen(place, date: inputModel.date)
         {
         case .success(let isOpen):
-          resultsModel.displayIsOpen = true
-          resultsModel.isOpen = isOpen
+          resultsModel = ResultsModel(displayIsOpen: true, isOpen: isOpen)
         case .failure(let placesError):
           errorAlertDescription = placesError.localizedDescription
           shouldPresentError = true
@@ -214,7 +211,7 @@ struct ClientRequests: View {
       Task {
         switch await Self.placesClient.searchByText(with: searchByTextRequest) {
         case .success(let places):
-          resultsModel.places = places
+          resultsModel = ResultsModel(places: places)
         case .failure(let placesError):
           errorAlertDescription = placesError.localizedDescription
           shouldPresentError = true
@@ -250,7 +247,7 @@ struct ClientRequests: View {
       Task {
         switch await Self.placesClient.searchNearby(with: searchNearbyRequest) {
         case .success(let places):
-          resultsModel.places = places
+          resultsModel = ResultsModel(places: places)
         case .failure(let placesError):
           errorAlertDescription = placesError.localizedDescription
           shouldPresentError = true
@@ -662,7 +659,7 @@ extension ClientRequests {
 // MARK: - Results
 
 extension ClientRequests {
-  struct ResultsModel {
+  struct ResultsModel: Equatable {
     var place: Place? {
       didSet {
         guard let place else { return }
@@ -693,32 +690,36 @@ extension ClientRequests {
     @Binding var resultsModel: ResultsModel
 
     var body: some View {
-      if let place = resultsModel.place { PlaceView(place: place) }
-      if let image = resultsModel.image { image }
-      if let suggestions = resultsModel.suggestions {
-        AutocompleteSuggestionsView(suggestions: suggestions)
-      }
-      if resultsModel.displayIsOpen {
-        Text("Place open status is \(displayText(for: resultsModel.isOpen)).")
-      }
-      if let places = resultsModel.places {
-        if !places.isEmpty {
-          List {
-            ForEach(places, id: \.self) { place in
-              NavigationLink(
+      if resultsModel == ResultsModel() {
+        Text("No Results.")
+      } else {
+        if let place = resultsModel.place { PlaceView(place: place) }
+        if let image = resultsModel.image { image }
+        if let suggestions = resultsModel.suggestions {
+          AutocompleteSuggestionsView(suggestions: suggestions)
+        }
+        if resultsModel.displayIsOpen {
+          Text("Place open status is \(displayText(for: resultsModel.isOpen)).")
+        }
+        if let places = resultsModel.places {
+          if !places.isEmpty {
+            List {
+              ForEach(places, id: \.self) { place in
+                NavigationLink(
                 """
                 Name: \(place.displayName ?? "")
                 Place ID: \(place.placeID ?? "")
                 """
-              ) {
-                PlaceView(place: place)
+                ) {
+                  PlaceView(place: place)
+                }
+                .minimumScaleFactor(0.5)
+                .lineLimit(2)
               }
-              .minimumScaleFactor(0.5)
-              .lineLimit(2)
             }
+          } else {
+            Text("No Places Found.")
           }
-        } else {
-          Text("No Places Found.")
         }
       }
     }

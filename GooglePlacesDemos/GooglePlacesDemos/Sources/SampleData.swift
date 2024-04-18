@@ -14,28 +14,48 @@
 import UIKit
 import SwiftUI
 
-struct Sample {
-  enum ViewType {
+struct Sample: Hashable {
+  enum ViewType: Hashable {
     case swiftUI(any View)
     case uiKit(UIViewController.Type)
+
+    static func == (lhs: Sample.ViewType, rhs: Sample.ViewType) -> Bool {
+      switch (lhs, rhs) {
+      case (.swiftUI(let lhsView), swiftUI(let rhsView)):
+        return type(of: lhsView) == type(of: rhsView)
+      case (.uiKit(let lhsViewControllerType), uiKit(let rhsViewControllerType)):
+        return lhsViewControllerType == rhsViewControllerType
+      default:
+        return false
+      }
+    }
+
+    func hash(into hasher: inout Hasher) {
+      switch self {
+      case .swiftUI(let view):
+        hasher.combine(String(describing: view))
+      case .uiKit(let viewControllerType):
+        hasher.combine(String(describing: viewControllerType))
+      }
+    }
   }
 
-  let viewClass: ViewType
+  let viewType: ViewType
   let title: String
 }
 
-struct Section {
+struct SampleSection: Hashable {
   let name: String
   let samples: [Sample]
 }
 
 enum Samples {
-  static func allSamples() -> [Section] {
+  static func allSampleSections() -> [SampleSection] {
     let basicSamples: [Sample] = [
-      Sample(viewClass: .swiftUI(ClientRequests()), title: "Client Requests")
+      Sample(viewType: .swiftUI(ClientRequests()), title: "Client Requests")
     ]
     return [
-      Section(name: "Basic", samples: basicSamples),
+      SampleSection(name: "Basic", samples: basicSamples),
     ]
   }
 }
