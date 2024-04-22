@@ -19,6 +19,8 @@ import GooglePlacesSwift
 
 /// A very simple demo to test Swift SDK APIs while in development.
 struct ClientRequests: View {
+  @Environment(\.parameterConfiguration) var parameterConfiguration
+
   @State private var onDismissInput: () -> Void = {}
   @State private var shouldShowInput = false
   @State private var inputModel = InputModel()
@@ -66,7 +68,8 @@ struct ClientRequests: View {
     inputModel.options = [.placeID, .properties]
     onDismissInput = {
       shouldShowInput = false
-      let properties: [PlaceProperty] = inputModel.useProperties ? [.all] : []
+      let properties =
+        inputModel.useProperties ? Array(parameterConfiguration.placeProperties) : []
       let fetchPlaceRequest = FetchPlaceRequest(
         placeID: inputModel.placeID,
         placeProperties: properties
@@ -116,7 +119,7 @@ struct ClientRequests: View {
       shouldShowInput = false
       let autocompleteRequest = AutocompleteRequest(
         query: inputModel.query, sessionToken: nil,
-        filter: nil)
+        filter: inputModel.useFilter ? parameterConfiguration.autocompleteFilter : nil)
       Task {
         switch await Self.placesClient.fetchAutocompleteSuggestions(with: autocompleteRequest) {
         case .success(let autocompleteSuggestions):
@@ -179,7 +182,7 @@ struct ClientRequests: View {
     ]
     onDismissInput = {
       shouldShowInput = false
-      let properties: [PlaceProperty] = inputModel.useProperties ? [.all] : []
+      let properties = inputModel.useProperties ? Array(parameterConfiguration.placeProperties) : []
       let searchByTextRequest: SearchByTextRequest
       if inputModel.useRestriction {
         searchByTextRequest = SearchByTextRequest(
@@ -229,7 +232,7 @@ struct ClientRequests: View {
     ]
     onDismissInput = {
       shouldShowInput = false
-      let properties: [PlaceProperty] = inputModel.useProperties ? [.all] : []
+      let properties = inputModel.useProperties ? Array(parameterConfiguration.placeProperties) : []
       let searchNearbyRequest: SearchNearbyRequest
       searchNearbyRequest = SearchNearbyRequest(
         locationRestriction: inputModel.restriction,

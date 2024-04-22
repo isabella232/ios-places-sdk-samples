@@ -16,6 +16,8 @@ import SwiftUI
 struct SampleList: View {
   let sampleSections = Samples.allSampleSections()
 
+  @StateObject var configuration = ParameterConfiguration()
+
   var body: some View {
     NavigationView {
       List(sampleSections, id: \.self) { section in
@@ -24,7 +26,7 @@ struct SampleList: View {
             NavigationLink(sample.title) {
               switch sample.viewType {
               case .swiftUI(let view):
-                AnyView(erasing: view)
+                AnyView(erasing: view.parameterConfiguration(configuration))
               case .uiKit(let viewControllerType):
                 Text("\(viewControllerType)")
               }
@@ -34,7 +36,30 @@ struct SampleList: View {
           Text(section.name)
         }
       }
+      .toolbar {
+        NavigationLink("Configure") {
+          ConfigurationView(configuration: configuration)
+        }
+      }
     }
+  }
+}
+
+struct ParameterConfigurationKey: EnvironmentKey {
+  static let defaultValue = ParameterConfiguration()
+
+}
+
+extension EnvironmentValues {
+  var parameterConfiguration: ParameterConfiguration {
+    get { self[ParameterConfigurationKey.self] }
+    set { self[ParameterConfigurationKey.self] = newValue }
+  }
+}
+
+extension View {
+  func parameterConfiguration(_ configuration: ParameterConfiguration) -> some View {
+    environment(\.parameterConfiguration, configuration)
   }
 }
 

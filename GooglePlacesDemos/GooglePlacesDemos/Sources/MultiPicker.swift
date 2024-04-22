@@ -15,6 +15,8 @@ struct MultiPicker<Label: View, Option: Identifiable & Hashable>: View {
         Text(ListFormatter.localizedString(byJoining: selectedOptions.map { optionFormatter($0) }))
           .foregroundColor(.gray)
           .multilineTextAlignment(.trailing)
+          .truncationMode(.tail)
+          .lineLimit(20)
       }
     }
   }
@@ -44,9 +46,18 @@ struct MultiPicker<Label: View, Option: Identifiable & Hashable>: View {
                 Image(systemName: "checkmark").foregroundColor(.accentColor)
               }
             }
-          }.tag(option.id)
+          }
         }
-      }.listStyle(GroupedListStyle())
+      }
+      .listStyle(GroupedListStyle())
+      .toolbar {
+        Button("Select All") {
+          selectedOptions.formUnion(options)
+        }
+        Button("Deselect All") {
+          selectedOptions = Set<Option>()
+        }
+      }
     }
 
     private func toggleSelection(option: Option) {
