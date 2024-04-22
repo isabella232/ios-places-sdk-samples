@@ -23,6 +23,7 @@ struct ClientRequests: View {
 
   @State private var onDismissInput: () -> Void = {}
   @State private var shouldShowInput = false
+  @State private var inputDismissedViaDoneButton = false
   @State private var inputModel = InputModel()
   @State private var resultsModel = ResultsModel()
   @State private var errorAlertDescription = ""
@@ -48,10 +49,11 @@ struct ClientRequests: View {
       .toolbar {
         clientRequests
       }
-      .sheet(isPresented: $shouldShowInput) {
-        onDismissInput()
-      } content: {
-        Input(inputModel: $inputModel, shouldShowInput: $shouldShowInput)
+      .sheet(isPresented: $shouldShowInput, onDismiss: onDismissInput) {
+        Input(
+          inputModel: $inputModel,
+          shouldShowInput: $shouldShowInput,
+          inputDismissedViaDoneButton: $inputDismissedViaDoneButton)
       }
       .alert(isPresented: $shouldPresentError) {
         Alert(
@@ -67,7 +69,8 @@ struct ClientRequests: View {
     shouldShowInput = true
     inputModel.options = [.placeID, .properties]
     onDismissInput = {
-      shouldShowInput = false
+      guard inputDismissedViaDoneButton else { return }
+      resultsModel = ResultsModel()
       let properties =
         inputModel.useProperties ? Array(parameterConfiguration.placeProperties) : []
       let fetchPlaceRequest = FetchPlaceRequest(
@@ -90,7 +93,8 @@ struct ClientRequests: View {
     shouldShowInput = true
     inputModel.options = [.photo, .size]
     onDismissInput = {
-      shouldShowInput = false
+      guard inputDismissedViaDoneButton else { return }
+      resultsModel = ResultsModel()
       guard let photo = inputModel.photo else {
         errorAlertDescription =
         "No photo metadata or size was selected. If the photo metadata list was empty try "
@@ -116,7 +120,8 @@ struct ClientRequests: View {
     shouldShowInput = true
     inputModel.options = [.query, .filter]
     onDismissInput = {
-      shouldShowInput = false
+      guard inputDismissedViaDoneButton else { return }
+      resultsModel = ResultsModel()
       let autocompleteRequest = AutocompleteRequest(
         query: inputModel.query, sessionToken: nil,
         filter: inputModel.useFilter ? parameterConfiguration.autocompleteFilter : nil)
@@ -136,7 +141,8 @@ struct ClientRequests: View {
     shouldShowInput = true
     inputModel.options = [.placeID, .date]
     onDismissInput = {
-      shouldShowInput = false
+      guard inputDismissedViaDoneButton else { return }
+      resultsModel = ResultsModel()
       Task {
         switch await Self.placesClient.isPlaceOpen(inputModel.placeID, date: inputModel.date)
         {
@@ -154,7 +160,8 @@ struct ClientRequests: View {
     shouldShowInput = true
     inputModel.options = [.place, .date]
     onDismissInput = {
-      shouldShowInput = false
+      guard inputDismissedViaDoneButton else { return }
+      resultsModel = ResultsModel()
       guard let place = inputModel.place else {
         errorAlertDescription =
         "No place was selected. If the list of places was empty try fetching a place first!"
@@ -181,7 +188,8 @@ struct ClientRequests: View {
       .priceLevels, .searchByTextRankPreference, .regionCode, .isStrictTypeFiltering,
     ]
     onDismissInput = {
-      shouldShowInput = false
+      guard inputDismissedViaDoneButton else { return }
+      resultsModel = ResultsModel()
       let properties = inputModel.useProperties ? Array(parameterConfiguration.placeProperties) : []
       let searchByTextRequest: SearchByTextRequest
       if inputModel.useRestriction {
@@ -231,7 +239,8 @@ struct ClientRequests: View {
       .excludedTypes, .includedPrimaryTypes, .excludedPrimaryTypes, .regionCode,
     ]
     onDismissInput = {
-      shouldShowInput = false
+      guard inputDismissedViaDoneButton else { return }
+      resultsModel = ResultsModel()
       let properties = inputModel.useProperties ? Array(parameterConfiguration.placeProperties) : []
       let searchNearbyRequest: SearchNearbyRequest
       searchNearbyRequest = SearchNearbyRequest(
@@ -327,6 +336,7 @@ extension ClientRequests {
   struct Input: View {
     @Binding var inputModel: InputModel
     @Binding var shouldShowInput: Bool
+    @Binding var inputDismissedViaDoneButton: Bool
 
     private let placeTypes: [PlaceType] = [.carDealer, .library, .bowlingAlley, .bank, .church]
 
@@ -392,9 +402,15 @@ extension ClientRequests {
             if inputModel.options.contains(.restrictionOrBias) { useRestrictionPicker }
           }
           SwiftUI.Section {
-            Button("Done") { shouldShowInput = false }
+            Button("Done") {
+              shouldShowInput = false
+              inputDismissedViaDoneButton = true
+            }
           }
         }
+      }
+      .onAppear() {
+        inputDismissedViaDoneButton = false
       }
     }
 
@@ -574,15 +590,15 @@ extension ClientRequests {
     private var rectangularCoordinateRegionInput: some View {
       HStack {
         Text("NE")
-        TextField("Latitude", text: $northEastLatInput).keyboardType(.decimalPad)
-        TextField("Longitude", text: $northEastLongInput).keyboardType(.decimalPad)
+        TextField("Latitude", text: $northEastLatInput).keyboardType(.numbersAndPunctuation)
+        TextField("Longitude", text: $northEastLongInput).keyboardType(.numbersAndPunctuation)
       }
       .onChange(of: northEastLatInput) { value in updateCoordinateRegion() }
       .onChange(of: northEastLongInput) { value in updateCoordinateRegion() }
       HStack {
         Text("SW")
-        TextField("Latitude", text: $southWestLatInput).keyboardType(.decimalPad)
-        TextField("Longitude", text: $southWestLongInput).keyboardType(.decimalPad)
+        TextField("Latitude", text: $southWestLatInput).keyboardType(.numbersAndPunctuation)
+        TextField("Longitude", text: $southWestLongInput).keyboardType(.numbersAndPunctuation)
       }
       .onChange(of: southWestLatInput) { value in updateCoordinateRegion() }
       .onChange(of: southWestLongInput) { value in updateCoordinateRegion() }
@@ -602,14 +618,14 @@ extension ClientRequests {
     private var circularCoordinateRegionInput: some View {
       HStack {
         Text("Center")
-        TextField("Latitude", text: $centerLatInput).keyboardType(.decimalPad)
-        TextField("Longitude", text: $centerLongInput).keyboardType(.decimalPad)
+        TextField("Latitude", text: $centerLatInput).keyboardType(.numbersAndPunctuation)
+        TextField("Longitude", text: $centerLongInput).keyboardType(.numbersAndPunctuation)
       }
       .onChange(of: centerLatInput) { value in updateCoordinateRegion() }
       .onChange(of: centerLongInput) { value in updateCoordinateRegion() }
       HStack {
         Text("Radius")
-        TextField("Meters", text: $radiusInput).keyboardType(.decimalPad)
+        TextField("Meters", text: $radiusInput).keyboardType(.numbersAndPunctuation)
       }
       .onChange(of: radiusInput) { value in updateCoordinateRegion() }
       .onAppear {
