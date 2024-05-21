@@ -12,10 +12,8 @@
 // permissions and limitations under the License.
 
 import CoreLocation
-import GooglePlaces
-import SwiftUI
-
 import GooglePlacesSwift
+import SwiftUI
 
 /// A very simple demo to test Swift SDK APIs while in development.
 struct ClientRequests: View {
