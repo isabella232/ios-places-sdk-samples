@@ -62,7 +62,7 @@ extension PlaceProperty: CustomStringConvertible, CaseIterable, Identifiable {
     .addressComponents,
     .all,
     .businessStatus,
-    /*.coordinate,
+    .coordinate,
     .currentOpeningHours,
     .currentSecondaryOpeningHours,
     .displayName,
@@ -94,7 +94,7 @@ extension PlaceProperty: CustomStringConvertible, CaseIterable, Identifiable {
     .timeZone,
     .types,
     .viewportInfo,
-    .websiteURL,*/
+    .websiteURL,
   ]
 
   public var description: String {

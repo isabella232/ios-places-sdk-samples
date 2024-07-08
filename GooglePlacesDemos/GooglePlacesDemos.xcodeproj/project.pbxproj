@@ -13,7 +13,7 @@
 		567EFD6E2BD080230055E7A6 /* SampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD6D2BD080230055E7A6 /* SampleList.swift */; };
 		567EFD702BD080250055E7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567EFD6F2BD080250055E7A6 /* Assets.xcassets */; };
 		567EFD732BD080250055E7A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567EFD722BD080250055E7A6 /* Preview Assets.xcassets */; };
-		567EFD7D2BD080250055E7A6 /* GooglePlacesDemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD7C2BD080250055E7A6 /* GooglePlacesDemosTests.swift */; };
+		567EFD7D2BD080250055E7A6 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD7C2BD080250055E7A6 /* SampleTests.swift */; };
 		567EFD872BD080250055E7A6 /* GooglePlacesDemosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */; };
 		567EFD892BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */; };
 		567EFDAA2BD0812B0055E7A6 /* GooglePlacesDemos.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 567EFDA92BD0812A0055E7A6 /* GooglePlacesDemos.xcconfig */; };
@@ -21,6 +21,7 @@
 		567EFDB02BD083B40055E7A6 /* ClientRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFDAE2BD083B40055E7A6 /* ClientRequests.swift */; };
 		567EFDB42BD08F6D0055E7A6 /* MultiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFDB32BD08F6D0055E7A6 /* MultiPicker.swift */; };
 		56C0602C2BFD507000B96354 /* GooglePlacesSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56C0602B2BFD507000B96354 /* GooglePlacesSwift */; };
+		56E420C82C33562D005BBBE7 /* ParameterConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E420C72C33562D005BBBE7 /* ParameterConfigurationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,7 @@
 		567EFD6F2BD080250055E7A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		567EFD722BD080250055E7A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		567EFD782BD080250055E7A6 /* GooglePlacesDemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesDemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		567EFD7C2BD080250055E7A6 /* GooglePlacesDemosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosTests.swift; sourceTree = "<group>"; };
+		567EFD7C2BD080250055E7A6 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
 		567EFD822BD080250055E7A6 /* GooglePlacesDemosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesDemosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITests.swift; sourceTree = "<group>"; };
 		567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		567EFDAC2BD083A40055E7A6 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		567EFDAE2BD083B40055E7A6 /* ClientRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientRequests.swift; sourceTree = "<group>"; };
 		567EFDB32BD08F6D0055E7A6 /* MultiPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPicker.swift; sourceTree = "<group>"; };
+		56E420C72C33562D005BBBE7 /* ParameterConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterConfigurationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,8 @@
 		567EFD7B2BD080250055E7A6 /* GooglePlacesDemosTests */ = {
 			isa = PBXGroup;
 			children = (
-				567EFD7C2BD080250055E7A6 /* GooglePlacesDemosTests.swift */,
+				567EFD7C2BD080250055E7A6 /* SampleTests.swift */,
+				56E420C72C33562D005BBBE7 /* ParameterConfigurationTests.swift */,
 			);
 			path = GooglePlacesDemosTests;
 			sourceTree = "<group>";
@@ -347,7 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				567EFD7D2BD080250055E7A6 /* GooglePlacesDemosTests.swift in Sources */,
+				56E420C82C33562D005BBBE7 /* ParameterConfigurationTests.swift in Sources */,
+				567EFD7D2BD080250055E7A6 /* SampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

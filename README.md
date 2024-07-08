@@ -36,24 +36,20 @@ https://developers.google.com/places/ios-api/
 
 ## Usage
 
-### Client Request Sample
+### Sample List
 
-Description of feature 1.
+A list of samples is presented at app startup. These samples each demonstrate a
+specific capability or capabilities of the SDK. The "Samples" directory contains
+most of the actual sample code. Everything else - with the exception of
+ParameterConfiguration.swift - is just scaffolding for the sample app to enable easy
+display of various samples.
 
-```
-Feature 1 sample code
-```
-
-</details>
-
-<details>
-  <summary>Feature 2 title</summary>
-
-### Configure
+### ParameterConfiguration.swift
 
 The "Configure" button on the startup page allows setting place properties and
-autocomplete filter options that allows easy configuration that can apply
-multiple samples.
+autocomplete filter options that allows easy configuration that can apply to
+multiple samples. These options are set in ParameterConfiguration.swift which
+can be used as a reference for using `PlaceType` and `AutocompleteFilter`.
 
 ## Contributing
 
