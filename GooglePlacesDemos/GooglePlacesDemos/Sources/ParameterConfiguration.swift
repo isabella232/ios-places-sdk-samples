@@ -20,6 +20,7 @@ class ParameterConfiguration: ObservableObject {
   @Published var locationOption = LocationOption.unspecified
   @Published var placeProperties = Set<PlaceProperty>(PlaceProperty.allCases)
 
+  /// The autocompleteFilter for this configuration.
   var autocompleteFilter: AutocompleteFilter {
     let restriction: RectangularCoordinateRegion?
     if let northEast = locationOption.northEast, let southWest = locationOption.southWest {
@@ -46,6 +47,7 @@ class ParameterConfiguration: ObservableObject {
 
     var id: Self { self }
 
+    /// Some higher-level place type options that are mapped to concrete sets of `PlaceType`.
     var placeTypes: Set<PlaceType>? {
       switch self {
       case .geocode:
@@ -72,6 +74,7 @@ class ParameterConfiguration: ObservableObject {
 
     var id: Self { self }
 
+    /// The northEast coodinate for this location.
     var northEast: CLLocationCoordinate2D? {
       switch self {
       case .canada:
@@ -83,6 +86,7 @@ class ParameterConfiguration: ObservableObject {
       }
     }
 
+    /// The southWest coodinate for this location.
     var southWest: CLLocationCoordinate2D? {
       switch self {
       case .canada:
@@ -94,6 +98,7 @@ class ParameterConfiguration: ObservableObject {
       }
     }
 
+    /// The `CLLocation` for this location.
     var location: CLLocation? {
       switch self {
       case .canada, .kansas:

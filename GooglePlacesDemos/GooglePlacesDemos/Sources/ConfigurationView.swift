@@ -15,11 +15,12 @@ import CoreLocation
 import GooglePlacesSwift
 import SwiftUI
 
+/// Allows specifying configurations that can be applied to any sample in the demo app.
 struct ConfigurationView: View {
   @ObservedObject var configuration: ParameterConfiguration
   // Note: This is a separate state and we use onChange(of:) to update `configuration` because of an
   // apparent bug where the MultiPicker gets popped after each change. Possibly related to
-  // NavigationView? With min iOS 16 we can migrate to NavigationStack and possible remove this.
+  // NavigationView? With min iOS 16 we can migrate to NavigationStack and possibly remove this.
   @State var placeProperties: Set<PlaceProperty>
 
   init(configuration: ParameterConfiguration) {
@@ -54,6 +55,7 @@ struct ConfigurationView: View {
   }
 }
 
+/// Displayable names for each `PlaceProperty`.
 extension PlaceProperty: CustomStringConvertible, CaseIterable, Identifiable {
   public var id: Self { self }
 

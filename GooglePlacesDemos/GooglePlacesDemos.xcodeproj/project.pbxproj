@@ -15,7 +15,6 @@
 		567EFD732BD080250055E7A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567EFD722BD080250055E7A6 /* Preview Assets.xcassets */; };
 		567EFD7D2BD080250055E7A6 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD7C2BD080250055E7A6 /* SampleTests.swift */; };
 		567EFD872BD080250055E7A6 /* GooglePlacesDemosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */; };
-		567EFD892BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */; };
 		567EFDAA2BD0812B0055E7A6 /* GooglePlacesDemos.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 567EFDA92BD0812A0055E7A6 /* GooglePlacesDemos.xcconfig */; };
 		567EFDAD2BD083A40055E7A6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFDAC2BD083A40055E7A6 /* SampleData.swift */; };
 		567EFDB02BD083B40055E7A6 /* ClientRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFDAE2BD083B40055E7A6 /* ClientRequests.swift */; };
@@ -55,7 +54,6 @@
 		567EFD7C2BD080250055E7A6 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
 		567EFD822BD080250055E7A6 /* GooglePlacesDemosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlacesDemosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITests.swift; sourceTree = "<group>"; };
-		567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		567EFD962BD080B60055E7A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		567EFD982BD080BD0055E7A6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		567EFD9A2BD080C70055E7A6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				567EFD862BD080250055E7A6 /* GooglePlacesDemosUITests.swift */,
-				567EFD882BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift */,
 			);
 			path = GooglePlacesDemosUITests;
 			sourceTree = "<group>";
@@ -359,7 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				567EFD892BD080250055E7A6 /* GooglePlacesDemosUITestsLaunchTests.swift in Sources */,
 				567EFD872BD080250055E7A6 /* GooglePlacesDemosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,4 @@
-// Copyright 2020 Google LLC. All rights reserved.
+// Copyright 2024 Google LLC. All rights reserved.
 //
 //
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -14,6 +14,7 @@
 import UIKit
 import SwiftUI
 
+/// Represents an individual sample that can either be SwiftUI based or UIKit based.
 struct Sample: Hashable {
   enum ViewType: Hashable {
     case swiftUI(any View)
@@ -44,11 +45,13 @@ struct Sample: Hashable {
   let title: String
 }
 
+/// A collection of samples.
 struct SampleSection: Hashable {
   let name: String
   let samples: [Sample]
 }
 
+/// Namespaced collections of samples for easy creation.
 enum Samples {
   static func allSampleSections() -> [SampleSection] {
     let basicSamples: [Sample] = [

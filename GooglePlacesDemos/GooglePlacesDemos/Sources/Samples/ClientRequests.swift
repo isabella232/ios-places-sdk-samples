@@ -15,7 +15,11 @@ import CoreLocation
 import GooglePlacesSwift
 import SwiftUI
 
-/// A very simple demo to test Swift SDK APIs while in development.
+/// Demonstrates the main requests that can be made using `PlacesClient`.
+///
+/// The `Client Requests` section is likely to be the most useful for demonstration purposes as this
+/// is where the requests on `PlacesClient` are actually made. The rest of the code is to
+/// facilitate getting input and displaying the results.
 struct ClientRequests: View {
   @Environment(\.parameterConfiguration) var parameterConfiguration
 

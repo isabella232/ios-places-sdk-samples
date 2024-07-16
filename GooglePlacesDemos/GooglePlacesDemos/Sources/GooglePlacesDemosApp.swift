@@ -21,9 +21,13 @@ struct GooglePlacesDemosApp: App {
       fatalError("Info.plist not found")
     }
     guard let apiKey: String = infoDictionary["API_KEY"] as? String else {
-      // To use GooglePlacesDemos, please register an API Key for your application, set it in an
-      // xcconfig file, and use that config file for the configuration being built (Debug). Your
-      // API Key should be kept private and not be checked in.
+      // To use GooglePlacesDemos, please register an API Key for your application. Your API Key
+      // should be kept private and not be checked in.
+      //
+      // Create an xcconfig file for your API key. By default the file should be named
+      // "GooglePlacesDemos.xcconfig" and be located at the same directory level as the demo
+      // application's "Info.plist" file. The contents of this file should contain at least a line
+      // like `API_KEY = <insert your API key here>`.
       //
       // See documentation on getting an API Key for your API Project here:
       // https://developers.google.com/places/ios-sdk/start#get-key

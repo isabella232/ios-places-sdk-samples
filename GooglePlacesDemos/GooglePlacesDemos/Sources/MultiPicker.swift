@@ -13,6 +13,7 @@
 
 import SwiftUI
 
+/// A view that allows selecting multiple options from a list.
 struct MultiPicker<Label: View, Option: Identifiable & Hashable>: View {
   let label: Label
   let options: [Option]
@@ -25,7 +26,7 @@ struct MultiPicker<Label: View, Option: Identifiable & Hashable>: View {
       HStack {
         label.foregroundColor(.black)
         Spacer()
-        Text(ListFormatter.localizedString(byJoining: selectedOptions.map { optionFormatter($0) }))
+        Text(ListFormatter.localizedString(byJoining: selectedOptions.map { optionFormatter($0) }.sorted()))
           .foregroundColor(.gray)
           .multilineTextAlignment(.trailing)
           .truncationMode(.tail)
@@ -42,6 +43,7 @@ struct MultiPicker<Label: View, Option: Identifiable & Hashable>: View {
     )
   }
 
+  /// Displays a list of options and allows selecting multiple options.
   struct OptionSelectionView: View {
     let options: [Option]
     let optionFormatter: (Option) -> String
