@@ -28,7 +28,7 @@ on:
 
 jobs:
     build-GooglePlacesDemos:
-        runs-on: macos-latest-large
+        runs-on: macos-latest
 
         steps:
         - name: Checkout repository
