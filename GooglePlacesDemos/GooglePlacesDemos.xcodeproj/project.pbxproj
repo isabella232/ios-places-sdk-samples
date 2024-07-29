@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561B01AB2C542EB0003BA3F0 /* SearchNearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561B01AA2C542EB0003BA3F0 /* SearchNearbyViewController.swift */; };
+		561B01AD2C542F5F003BA3F0 /* ParameterInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561B01AC2C542F5F003BA3F0 /* ParameterInputTextField.swift */; };
 		5652AAA82BD1D87C00E55241 /* ParameterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652AAA72BD1D87C00E55241 /* ParameterConfiguration.swift */; };
 		5652AAAA2BD1D88700E55241 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652AAA92BD1D88700E55241 /* ConfigurationView.swift */; };
 		567EFD6C2BD080230055E7A6 /* GooglePlacesDemosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFD6B2BD080230055E7A6 /* GooglePlacesDemosApp.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		561B01AA2C542EB0003BA3F0 /* SearchNearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNearbyViewController.swift; sourceTree = "<group>"; };
+		561B01AC2C542F5F003BA3F0 /* ParameterInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterInputTextField.swift; sourceTree = "<group>"; };
 		562FC5042BD1DDEE00CD9057 /* GooglePlacesSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlacesSwift.xcframework; sourceTree = "<group>"; };
 		562FC5082BD1DDF200CD9057 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
 		5652AAA72BD1D87C00E55241 /* ParameterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterConfiguration.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				567EFDAE2BD083B40055E7A6 /* ClientRequests.swift */,
+				561B01AA2C542EB0003BA3F0 /* SearchNearbyViewController.swift */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				5652AAA92BD1D88700E55241 /* ConfigurationView.swift */,
 				5652AAA72BD1D87C00E55241 /* ParameterConfiguration.swift */,
 				567EFDAF2BD083B40055E7A6 /* Samples */,
+				561B01AC2C542F5F003BA3F0 /* ParameterInputTextField.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -333,9 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561B01AD2C542F5F003BA3F0 /* ParameterInputTextField.swift in Sources */,
 				567EFD6E2BD080230055E7A6 /* SampleList.swift in Sources */,
 				567EFDAD2BD083A40055E7A6 /* SampleData.swift in Sources */,
 				567EFDB02BD083B40055E7A6 /* ClientRequests.swift in Sources */,
+				561B01AB2C542EB0003BA3F0 /* SearchNearbyViewController.swift in Sources */,
 				567EFD6C2BD080230055E7A6 /* GooglePlacesDemosApp.swift in Sources */,
 				5652AAAA2BD1D88700E55241 /* ConfigurationView.swift in Sources */,
 				5652AAA82BD1D87C00E55241 /* ParameterConfiguration.swift in Sources */,

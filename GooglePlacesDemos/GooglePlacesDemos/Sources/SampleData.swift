@@ -54,11 +54,15 @@ struct SampleSection: Hashable {
 /// Namespaced collections of samples for easy creation.
 enum Samples {
   static func allSampleSections() -> [SampleSection] {
-    let basicSamples: [Sample] = [
+    let placesSwiftSamples: [Sample] = [
       Sample(viewType: .swiftUI(ClientRequests()), title: "Client Requests")
     ]
+    let placesSamples: [Sample] = [
+      Sample(viewType: .uiKit(SearchNearbyViewController.self), title: "Search Nearby")
+    ]
     return [
-      SampleSection(name: "Basic", samples: basicSamples),
+      SampleSection(name: "GooglePlacesSwift Samples", samples: placesSwiftSamples),
+      SampleSection(name: "GooglePlaces Samples", samples: placesSamples),
     ]
   }
 }

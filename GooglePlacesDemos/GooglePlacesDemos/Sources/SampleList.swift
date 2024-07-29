@@ -29,13 +29,12 @@ struct SampleList: View {
               case .swiftUI(let view):
                 AnyView(erasing: view.parameterConfiguration(configuration))
               case .uiKit(let viewControllerType):
-                // TODO: Add ability to push UIViewController's.
-                Text("View controller displayed here.")
+                SampleWrapperViewController(viewControllerType: viewControllerType)
               }
             }
           }
         } header: {
-          Text(section.name)
+          Text(section.name).textCase(.none)
         }
       }
       .toolbar {
@@ -44,6 +43,16 @@ struct SampleList: View {
         }
       }
     }
+  }
+
+  struct SampleWrapperViewController: UIViewControllerRepresentable {
+    var viewControllerType: UIViewController.Type
+
+    func makeUIViewController(context: Context) -> some UIViewController {
+      return viewControllerType.init()
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
   }
 }
 
